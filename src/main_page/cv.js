@@ -9,7 +9,7 @@ export default function CV() {
                 <div id="profile">
                     <h1 id="name">Xiangjiu Li</h1>
                     <h2 id="profile_title">Profile</h2>
-                    <p id="profile_content">sdflkhasdl haslfkh alskfdhl kashflkhqwlkhfolqkhfo ihqwofi hqwof hqlwkh lkasdhflk ashflk haslkfhaslkfh alskfh alkshflaskhflakshfk</p>
+                    <p id="profile_content">This is a place holder for my profile. :)</p>
                 </div>
             </div>
             <div id="info">
@@ -20,7 +20,7 @@ export default function CV() {
                         <img id="uni_icon" src={logo}></img>
                         <h3 id="uni_name">University of Debrecen</h3>
                     </div>
-                    <h2 id="gpa">Last semester GPA: 4.0</h2>
+                    <h2 id="gpa">Last semester GPA: 4.48/5</h2>
                 </div>
                 <div id="awards_showcase">
                     <h1 id="award_title">Awards</h1>
