@@ -9,6 +9,7 @@ export default function ShowCase() {
 
     const project_2 = useRef(null)
     const project_5 = useRef(null)
+    const show_case = useRef(null)
 
     useEffect(() => {
         if (counter > 0)
@@ -16,12 +17,14 @@ export default function ShowCase() {
         else {
             console.log("Time out2!")
             if (currentPage === 1) {
-                project_5.current.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"})
+                //project_5.current.scrollIntoView({behavior: "smooth", inline: "center", block:"nearest"})
+                show_case.current.scrollTo({left: 100000, behavior: "smooth"})
                 setCurrentPage(2)
                 setCounter(8)
             }
             else {
-                project_2.current.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"})
+                //project_2.current.scrollIntoView({behavior: "smooth", inline: "center", block:"nearest"})
+                show_case.current.scrollTo({left: 0, behavior: "smooth"})
                 setCurrentPage(1)
                 setCounter(8)
             }
@@ -31,7 +34,7 @@ export default function ShowCase() {
     return (
         <div id="show_cases_container">
             <h1>Project Show Case</h1>
-            <div id="show_case">
+            <div id="show_case" ref={show_case}>
                 <div id="project_1" className="project">
                     <img id="project_1_screen_shot"
                          src={logo}

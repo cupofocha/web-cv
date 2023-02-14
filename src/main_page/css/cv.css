@@ -1,4 +1,5 @@
 #cv {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,54 +8,99 @@
     align-items: center;
     margin-top: 0;
     padding: 0;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #7c7c7d;
+    background: rgb(146, 203, 222);
+}
+
+#return_btn {
+    position: absolute;
+    top: 1vh;
+    left: -100vw;
+    width: 5vw;
+    height: 5vw;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    transition: all .5s cubic-bezier(.6,.4,0,1);
+}
+
+#ud_logo{
+    position: absolute;
+    right: -4.5vw;
+    top: 1vh;
+    width: 13vw;
+    height: 13vw;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+}
+
+#ud_logo_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #portrait {
-    width: 20%;
+    width: 30%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
     padding: 0;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #7c7c7d;
+    margin-bottom: 15vh;
+    z-index: 10;
+    background: rgb(1, 163, 209, 0.75);
+    box-shadow: 0px 5px 5px 0px rgba(1, 163, 209, 0.37);
+    border-radius: 50px 50px 50px 50px;
+    left: 35%;
+    top: 10%;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
 }
 #portrait_img {
-    width: 100%;
-    height: 100%;
+    width: 65%;
+    height: 65%;
     object-fit: cover;
     border-radius: 50%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 #info {
-    width: 50%;
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 5vw;
     padding: 0;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #7c7c7d;
 }
 
 #education {
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #7c7c7d;
+    width: 30%;
+    height: 30%;
+    background: rgb(152, 193, 125, 0.75);
+    border-radius: 50px 0 0 50px;
+    right: -27%;
+    top: 3%;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+
+
+#edu {
+    font-size: 2vw;
+}
+
+#degree {
+    font-size: 1.2vw;
 }
 
 #uni {
@@ -68,8 +114,8 @@
 }
 
 #uni_icon {
-    width: 5vw;
-    height: 5vh;
+    width: 4vw;
+    height: 4vw;
     margin: 0;
     padding: 0;
 }
@@ -78,9 +124,34 @@
     padding-right: 2vw;
 }
 
-#contact {
+#award_title {
+    font-size: 2vw;
+}
+
+#skills_title{
+    font-size: 2vw;
+}
+
+#skills_container {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 42vw;
+    border-radius: 50px 0 0 50px;
+    background: rgb(0, 121, 144, 0.75);
+    right: -27%;
+    top: 60%;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+
+#skills {
     width: 100%;
-    height: 5vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -89,18 +160,7 @@
     padding: 0;
 }
 
-#contact {
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2vh;
-    padding: 0;
-}
-
-#contact > div {
+#skills > div {
     width: 5vw;
     height: 5vh;
     margin: 0;
@@ -114,18 +174,22 @@
 }
 
 #awards_showcase{
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 30%;
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #7c7c7d;
+    margin-left: 53vw;
+    background: rgb(1, 163, 209, 0.75);
+    box-shadow: 0px 5px 5px 0px rgba(1, 163, 209, 0.37);
+    border-radius: 50px 0 0 50px;
+    right: -27%;
+    top: 32%;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
 }
+
 
 .awards{
     width: 100%;
@@ -135,4 +199,24 @@
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+#degree{
+    display: none;
+}
+
+#uni{
+    display: none;
+}
+#gpa{
+    display: none;
+}
+#award1{
+    display: none;
+}
+#award2{
+    display: none;
+}
+#skills{
+    display: none;
 }
