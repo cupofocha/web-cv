@@ -7,6 +7,9 @@ import MainPage from "./main_page/main_page";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+      <head>
+          <link href="//db.onlinewebfonts.com/c/efd2c83c0903c21ebe65d4fc8c2ef5bb?family=PopulaireW00-Regular" rel="stylesheet" type="text/css"/>
+      </head>
     <MainPage/>
   </React.StrictMode>
 );
