@@ -1,7 +1,12 @@
-import "./css/show_case.css"
+import "./css/show_case.css";
 import logo from "../logo.svg";
-import ScrollIntoView from 'react-scroll-into-view'
+import ScrollIntoView from 'react-scroll-into-view';
 import {useEffect, useRef, useState} from "react";
+import skyrim_vid from "../skyrim_vid.webm";
+import javafx_vid from "../javafx_vid.webm";
+import godot_vid from "../godot_vid.webm";
+import lib_demo from "../lib_demo.webm";
+import sw_testing from "../sw-testing.webm";
 
 export default function ShowCase() {
     const [counter, setCounter] = useState(5)
@@ -36,9 +41,12 @@ export default function ShowCase() {
             <h1>Project Show Case</h1>
             <div id="show_case" ref={show_case}>
                 <div id="project_1" className="project">
-                    <img id="project_1_screen_shot"
-                         src={logo}
-                        className="project_screen_shot"
+                    <video id="project_1_screen_shot"
+                       src={lib_demo}
+                       autoPlay={true}
+                       muted={true}
+                       loop={true}
+                       className="project_screen_shot"
                     />
                     <div id="project_1_info" className="project_info">
                         <h1 id="project_1_title" className="project_title">Surfin' Bird</h1>
@@ -47,8 +55,11 @@ export default function ShowCase() {
                     </div>
                 </div>
                 <div id="project_2" className="project" ref={project_2}>
-                    <img id="project_2_screen_shot"
-                         src={logo}
+                    <video id="project_2_video"
+                         src={javafx_vid}
+                         autoPlay={true}
+                         muted={true}
+                         loop={true}
                          className="project_screen_shot"
                     />
                     <div id="project_2_info" className="project_info">
@@ -58,8 +69,11 @@ export default function ShowCase() {
                     </div>
                 </div>
                 <div id="project_3" className="project">
-                    <img id="project_3_screen_shot"
-                         src={logo}
+                    <video id="project_3_video"
+                         src={skyrim_vid}
+                         autoPlay={true}
+                         muted={true}
+                         loop={true}
                          className="project_screen_shot"
                     />
                     <div id="project_3_info" className="project_info">
@@ -69,8 +83,11 @@ export default function ShowCase() {
                     </div>
                 </div>
                 <div id="project_4" className="project">
-                    <img id="project_4_screen_shot"
-                         src={logo}
+                    <video id="project_4_screen_shot"
+                         src={godot_vid}
+                         autoPlay={true}
+                         muted={true}
+                         loop={true}
                          className="project_screen_shot"
                     />
                     <div id="project_4_info" className="project_info">
@@ -80,8 +97,11 @@ export default function ShowCase() {
                     </div>
                 </div>
                 <div id="project_5" className="project" ref={project_5}>
-                    <img id="project_5_screen_shot"
-                         src={logo}
+                    <video id="project_5_screen_shot"
+                         src={javafx_vid}
+                         autoPlay={true}
+                         muted={true}
+                         loop={true}
                          className="project_screen_shot"
                     />
                     <div id="project_5_info" className="project_info">
@@ -91,8 +111,11 @@ export default function ShowCase() {
                     </div>
                 </div>
                 <div id="project_6" className="project">
-                    <img id="project_6_screen_shot"
-                         src={logo}
+                    <video id="project_6_screen_shot"
+                         src={sw_testing}
+                         autoPlay={true}
+                         muted={true}
+                         loop={true}
                          className="project_screen_shot"
                     />
                     <div id="project_6_info" className="project_info">
