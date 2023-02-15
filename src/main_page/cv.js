@@ -1,12 +1,14 @@
 import logo from "../logo.svg";
 import "./css/cv.css";
 import ud_logo_img from "../ud-logo.png";
-import portrait_img from "../portrait.jpg";
+//import portrait_img from "../portrait.jpg";
 import return_btn_img from "../return.png";
 import trophy_img from "../trophy.svg";
 import java_file_icon from "../java-iconsvg.svg";
 import email_img from "../mail-icon.svg";
 import linkedin_img from "../linkedin_icon.svg";
+import {createRef, useEffect, useState} from "react";
+import portrait_img from "../portrait2.jpg";
 
 export default function CV() {
 
@@ -29,7 +31,6 @@ export default function CV() {
     let trophy
     let skill_icon
 
-
     function handleTabsMouthClicked(event) {
         for (let i = 0; i < tabs.length; i++) {
             tabs[i].style.transitionDelay = "0ms"
@@ -37,6 +38,7 @@ export default function CV() {
                 tabs[i].style.right = "-50vw"
             }
         }
+
         event.currentTarget.style.width = "100vw"
         event.currentTarget.style.height = "100vh"
         event.currentTarget.style.right = "0"
@@ -238,14 +240,28 @@ export default function CV() {
                              onClick={handleGitHubClicked}
                         />
                     </div>
+                    <h3 id="hint_1" className="hint">Flip me :D</h3>
                 </div>
                 <div id="card_back">
-                    <p>
-                        I am a Computer Science student at the University of Debrecen.
+                    <p style={{textAlign:"center"}}>
+                        Hi there!
                     </p>
                     <p>
-                        I am passionate about programming and I am always looking for new challenges.
+                        👨‍🎓I'm a Computer Science student at the University of Debrecen.
                     </p>
+                    <p>
+                        ⌨️I'm seeking for an internship to gain valuable experience in the field.
+                    </p>
+                    <p>
+                        🌱I'm learning React and Spring Boot.
+                    </p>
+                    <p>
+                        🔭I'm also working on a game using Godot Engine.
+                    </p>
+                    <p style={{fontSize:"0.5vw", opacity:"50%"}}>
+                        And I'm experienced in Minecraft server hosting and mod development.
+                    </p>
+                    <h3 id="hint_2" className="hint">Flip me :D</h3>
                 </div>
             </div>
             <div id="info">
@@ -260,10 +276,9 @@ export default function CV() {
                     <div id="edu_info">
                         <h4 id="degree">Ongoing Computer Science BSc</h4>
                         <div id="uni">
-                            <img id="uni_icon" src={logo}></img>
                             <h3 id="uni_name">University of Debrecen</h3>
                         </div>
-                        <h2 id="gpa">Last semester GPA: 4.48/5</h2>
+                        <h2 id="gpa">Last semester GPA: 4.82/5</h2>
                     </div>
                 </div>
                 <div id="awards_showcase"
@@ -292,7 +307,7 @@ export default function CV() {
                     <div id="skill_icon" className="side_img_container">
                         <img id="skill_icon_img" src={java_file_icon} alt="trophy_img" className="side_img"/>
                     </div>
-                    <h1 id="skills_title">Skills</h1>
+                    <h1 id="skills_title">Tech / Tools</h1>
                     <div id="skills">
                         <div id="skills_set_1" className="skills_set">
                             <div id="java" className="skill_container">

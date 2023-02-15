@@ -23,6 +23,11 @@
     transition: all .5s cubic-bezier(.6,.4,0,1);
 }
 
+#return_btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 #profile {
     display: flex;
     flex-direction: column;
@@ -123,9 +128,7 @@
     letter-spacing: 3px;
     color: white;
     padding: 0;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
-    margin-left: 2vw;
+    margin: 2vh 2vw 1vh;
 }
 
 #card_front {
@@ -151,6 +154,12 @@
     border-radius: 50%;
     margin-top: 5vh;
     margin-bottom: 2vh;
+    transition: all 1s
+}
+
+#portrait_img:hover {
+    transform: rotate(-360deg);
+    transition: all 1s
 }
 
 #info {
@@ -396,14 +405,37 @@
     filter: invert(100%) sepia(4%) saturate(0%) hue-rotate(290deg) brightness(107%) contrast(104%);
     margin-right: 1vw;
     margin-left: 1vw;
+    transition: all .4s;
 }
 
 .contact_icon:hover {
     transform: rotate(360deg);
     transition: all .4s;
+    cursor: pointer;
 }
 
 #linkedin_icon {
     width: 53px;
     height: 53px;
+}
+
+.hint {
+    position: absolute;
+    font-family: 'PopulaireW00-Regular', cursive;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+    font-size: 1.5vw;
+    opacity: 60%;
+    font-weight: normal;
+    bottom: 2%;
+    right: 0;
+    transform: rotate(-45deg);
+    transition: all .4s;
+}
+
+.hint:hover {
+    transform: rotate(-45deg) scale(1.1);
+    transition: all .4s;
+    cursor: pointer;
 }
