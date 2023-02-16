@@ -51,7 +51,7 @@
     width: 100%;
     height: 100%;
     top: 80%;
-    background: rgb(127, 255, 212, 0.5);
+    background: rgb(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -59,8 +59,43 @@
 }
 
 .project_title {
-    font-size: 2vw;
+    font-size: 3vw;
     margin-top: 2vh;
+    font-family: 'PopulaireW00-Regular', cursive;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #d8d8d8;
+}
+
+.project_description {
+    font-size: 1.5vw;
+    margin-top: 1vh;
+    font-family: 'PopulaireW00-Regular', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.project_tool_title {
+    font-size: 1.8vw;
+    margin-top: 3vh;
+    font-family: 'PopulaireW00-Regular', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.project_tool {
+    font-size: 1vw;
+    margin-top: 1vh;
+    font-family: 'PopulaireW00-Regular', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+}
+
+#project_3_title {
+    letter-spacing: 1px;
 }
 
 .project_info:hover{
