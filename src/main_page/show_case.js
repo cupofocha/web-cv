@@ -7,6 +7,8 @@ import javafx_vid from "../javafx_vid.webm";
 import godot_vid from "../godot_vid.webm";
 import lib_demo from "../lib_demo.webm";
 import sw_testing from "../sw-testing.webm";
+import main_page_screen_shot from "../main_page_screen_shot.png";
+import post_page_screen_shot from "../post_page_screen_shot.png";
 
 export default function ShowCase() {
     const [counter, setCounter] = useState(5)
@@ -16,20 +18,27 @@ export default function ShowCase() {
     const project_2 = useRef(null)
     const project_5 = useRef(null)
     const show_case = useRef(null)
+    const buttonHref = useRef(null)
 
     useEffect(() => {
-        if (counter > 0 && !stopCounting)
+        if(stopCounting){
+            setCounter(15)
+        }
+        if (counter > 0 && !stopCounting){
             setTimeout(() => setCounter(counter - 1), 1000)
+        }
         else if(counter === 0 && !stopCounting){
             if (currentPage === 1) {
                 //project_5.current.scrollIntoView({behavior: "smooth", inline: "center", block:"nearest"})
                 show_case.current.scrollTo({left: 100000, behavior: "smooth"})
+                buttonHref.current.style.left = "105px"
                 setCurrentPage(2)
                 setCounter(8)
             }
             else {
                 //project_2.current.scrollIntoView({behavior: "smooth", inline: "center", block:"nearest"})
                 show_case.current.scrollTo({left: 0, behavior: "smooth"})
+                buttonHref.current.style.left = "5px"
                 setCurrentPage(1)
                 setCounter(8)
             }
@@ -42,6 +51,23 @@ export default function ShowCase() {
 
     function handleMouseLeave(event) {
         setStopCounting(false)
+    }
+
+    function handleHrefClicked(){
+        if (currentPage === 1) {
+            //project_5.current.scrollIntoView({behavior: "smooth", inline: "center", block:"nearest"})
+            show_case.current.scrollTo({left: 100000, behavior: "smooth"})
+            buttonHref.current.style.left = "105px"
+            setCurrentPage(2)
+            setStopCounting(true)
+        }
+        else {
+            //project_2.current.scrollIntoView({behavior: "smooth", inline: "center", block:"nearest"})
+            show_case.current.scrollTo({left: 0, behavior: "smooth"})
+            buttonHref.current.style.left = "5px"
+            setCurrentPage(1)
+            setStopCounting(true)
+        }
     }
 
     return (
@@ -61,6 +87,7 @@ export default function ShowCase() {
                      className="project"
                      onMouseEnter={handleMouseEnter}
                      onMouseLeave={handleMouseLeave}
+                     onClick={() => window.open("https://github.com/cupofocha/android-demo")}
                 >
                     <video id="project_1_screen_shot"
                        src={lib_demo}
@@ -81,15 +108,13 @@ export default function ShowCase() {
                      ref={project_2}
                      onMouseEnter={handleMouseEnter}
                      onMouseLeave={handleMouseLeave}
+                     onClick={() => window.open("http://bird.ochawork.shop")}
                 >
                     <div id="ribbon">
                         <h1 id="ribbon_text"></h1>
                     </div>
-                    <video id="project_2_video"
-                         src={javafx_vid}
-                         autoPlay={true}
-                         muted={true}
-                         loop={true}
+                    <img id="project_2_screen_shot"
+                         src={post_page_screen_shot}
                          className="project_screen_shot"
                     />
                     <div id="project_2_info" className="project_info">
@@ -103,6 +128,7 @@ export default function ShowCase() {
                      className="project"
                      onMouseEnter={handleMouseEnter}
                      onMouseLeave={handleMouseLeave}
+                     onClick={() => window.open("https://github.com/cupofocha/SkyrimFlavoredLockPicking")}
                 >
                     <video id="project_3_video"
                          src={skyrim_vid}
@@ -123,6 +149,7 @@ export default function ShowCase() {
                      className="project"
                      onMouseEnter={handleMouseEnter}
                      onMouseLeave={handleMouseLeave}
+                        onClick={() => window.open("http://bird.ochawork.shop")}
                 >
                     <video id="project_4_screen_shot"
                          src={godot_vid}
@@ -143,6 +170,7 @@ export default function ShowCase() {
                      ref={project_5}
                      onMouseEnter={handleMouseEnter}
                      onMouseLeave={handleMouseLeave}
+                        onClick={() => window.open("http://bird.ochawork.shop")}
                 >
                     <video id="project_5_screen_shot"
                          src={javafx_vid}
@@ -162,6 +190,7 @@ export default function ShowCase() {
                      className="project"
                      onMouseEnter={handleMouseEnter}
                      onMouseLeave={handleMouseLeave}
+                        onClick={() => window.open("https://github.com/cupofocha/software-testing-assignment")}
                 >
                     <video id="project_6_screen_shot"
                          src={sw_testing}
@@ -178,23 +207,8 @@ export default function ShowCase() {
                     </div>
                 </div>
             </div>
-            <div id="page_hrefs">
-                <ScrollIntoView id="page_href_1" selector="#project_2" scrollOptions={{inline: "center", block: "nearest"}}
-                                onClick={()=>{
-                                    setCurrentPage(2)
-                                }}>
-                    <div id="page_1" className="page_href">
-                        <img src={logo}/>
-                    </div>
-                </ScrollIntoView>
-                <ScrollIntoView id="page_href_2" selector="#project_5" scrollOptions={{inline: "center", block: "nearest"}}
-                                onClick={()=>{
-                                    setCurrentPage(1)
-                                }}>
-                    <div id="page_2" className="page_href">
-                        <img src={logo}/>
-                    </div>
-                </ScrollIntoView>
+            <div id="page_href" onClick={handleHrefClicked}>
+                <span id="href_button" ref={buttonHref}/>
             </div>
         </div>
 
