@@ -34,6 +34,7 @@
     flex-direction: column;
     text-align: center;
     overflow-y: hidden;
+    overflow-x: hidden;
     box-shadow: 1px 1px 10px 6px rgba(0,0,0,0.31) inset;
 }
 
@@ -132,4 +133,26 @@
     background: rgb(0, 0, 0);
     box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.31);
     transition: all .5s cubic-bezier(.6,.4,0,1);
+}
+
+
+#ribbon {
+    position: absolute;
+    top: 3vh;
+    right: -3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: crimson;
+    width: 200px;
+    height: 50px;
+    transform: rotate(45deg);
+}
+
+#ribbon_text {
+    font-size: 1.5vw;
+    font-family: 'PopulaireW00-Regular', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
 }

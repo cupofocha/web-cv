@@ -111,7 +111,7 @@ export default function ShowCase() {
                      onClick={() => window.open("http://bird.ochawork.shop")}
                 >
                     <div id="ribbon">
-                        <h1 id="ribbon_text"></h1>
+                        <h1 id="ribbon_text">Favorite</h1>
                     </div>
                     <img id="project_2_screen_shot"
                          src={post_page_screen_shot}
@@ -121,7 +121,7 @@ export default function ShowCase() {
                         <h1 id="project_2_title" className="project_title">Surfin' Bird</h1>
                         <h3 id="project_2_description_1" className="project_description">A social media website where you can create your profile, posting pictures also commenting under others' posts!</h3>
                         <h2 id="project_2_tool_title" className="project_tool_title">Made With</h2>
-                        <h4 id="project_2_tool" className="project_tool">love, passion, Java(Spring Boot), Javascript(React)</h4>
+                        <h4 id="project_2_tool" className="project_tool">love, passion, Java(Spring Boot), Javascript(React), PostgreSQL</h4>
                     </div>
                 </div>
                 <div id="project_3"

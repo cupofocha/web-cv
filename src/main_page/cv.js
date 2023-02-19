@@ -1,14 +1,13 @@
 import logo from "../logo.svg";
 import "./css/cv.css";
 import ud_logo_img from "../ud-logo.png";
-//import portrait_img from "../portrait.jpg";
+import portrait_img from "../portrait.jpg";
 import return_btn_img from "../return.png";
 import trophy_img from "../trophy.svg";
 import java_file_icon from "../java-iconsvg.svg";
 import email_img from "../mail-icon.svg";
 import linkedin_img from "../linkedin_icon.svg";
 import {createRef, useEffect, useState} from "react";
-import portrait_img from "../portrait2.jpg";
 
 export default function CV() {
 
