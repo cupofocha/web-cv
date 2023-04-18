@@ -7,7 +7,7 @@ import trophy_img from "../trophy.svg";
 import java_file_icon from "../java-iconsvg.svg";
 import email_img from "../mail-icon.svg";
 import linkedin_img from "../linkedin_icon.svg";
-import {createRef, useEffect, useState} from "react";
+import {useEffect} from "react";
 
 export default function CV() {
 
@@ -29,6 +29,21 @@ export default function CV() {
     let skills_title
     let trophy
     let skill_icon
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        education = document.getElementById("education")
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        awards = document.getElementById("awards_showcase")
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        skills_container = document.getElementById("skills_container")
+        setTimeout(() => education.style.right = "-5%", 478)
+        setTimeout(() => awards.style.right = "-5%", 300)
+        setTimeout(() => skills_container.style.right = "-5%", 100)
+        setTimeout(() => education.style.right = "-27%", 1800)
+        setTimeout(() => awards.style.right = "-27%", 2000)
+        setTimeout(() => skills_container.style.right = "-27%", 2178)
+    }, [])
 
     function handleTabsMouthClicked(event) {
         for (let i = 0; i < tabs.length; i++) {
@@ -90,6 +105,9 @@ export default function CV() {
             skill_icon.style.transitionDelay = "0ms"
             return_btn.style.filter = "invert(100%) sepia(4%) saturate(0%) hue-rotate(290deg) brightness(107%) contrast(104%)"
         }
+        education.style.cursor = "auto"
+        awards.style.cursor = "auto"
+        skills_container.style.cursor = "auto"
     }
 
     function handlePortraitClicked(event) {
@@ -190,6 +208,7 @@ export default function CV() {
         if (event.currentTarget.id !== "return_btn" && !fullPage) {
             event.currentTarget.style.right = "0"
             event.currentTarget.style.transitionDelay = "0ms"
+            event.currentTarget.style.cursor = "pointer"
         }
         else if(event.target.id === "return_btn"){
             currentTab.style.right = "-10%"
@@ -277,7 +296,7 @@ export default function CV() {
                         <div id="uni">
                             <h3 id="uni_name">University of Debrecen</h3>
                         </div>
-                        <h2 id="gpa">Last semester GPA: 4.82/5</h2>
+                        <h2 id="gpa">CGPA: 4.07/5</h2>
                     </div>
                 </div>
                 <div id="awards_showcase"
