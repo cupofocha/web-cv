@@ -8,6 +8,19 @@ import java_file_icon from "../java-iconsvg.svg";
 import email_img from "../mail-icon.svg";
 import linkedin_img from "../linkedin_icon.svg";
 import {useEffect} from "react";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getDatabase, ref, set } from "firebase/database";
+import uuid from 'react-uuid';
+
+const firebaseConfig = {
+    // ...
+    // The value of `databaseURL` depends on the location of the database
+    databaseURL: "https://greentechfiles-default-rtdb.europe-west1.firebasedatabase.app"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 export default function CV() {
 
@@ -43,6 +56,23 @@ export default function CV() {
         setTimeout(() => education.style.right = "-27%", 1800)
         setTimeout(() => awards.style.right = "-27%", 2000)
         setTimeout(() => skills_container.style.right = "-27%", 2178)
+        const requestOptions = {
+            method: 'GET',
+        };
+        let url = "https://geolocation-db.com/json/"
+        fetch(url, requestOptions)
+            .then(res => res.json())
+            .then(data => {
+                if (data.detail !== undefined) {
+                    alert(data.detail)
+                    return
+                }
+                set(ref(database, 'users/'+uuid()), data);
+            })
+            .catch(error => {
+                    console.log(error)
+                }
+            )
     }, [])
 
     function handleTabsMouthClicked(event) {
